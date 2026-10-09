@@ -1,0 +1,338 @@
+/* =========================================================
+   EMPLOYEE LOGIN PAGE
+========================================================= */
+
+.employee-login-page {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 20px;
+
+  background: var(--page-background);
+}
+
+
+/* =========================================================
+   LOGIN CARD
+========================================================= */
+
+.employee-login-card {
+  width: 100%;
+  max-width: 430px;
+
+  padding: 40px;
+
+  background: var(--white);
+
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+
+  box-shadow:
+    0 15px 40px rgba(var(--dark-blue-rgb), 0.12);
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.employee-login-logo {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 20px;
+}
+
+.employee-login-logo img {
+  width: 75px;
+  height: 75px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 2px solid var(--border-color);
+}
+
+
+/* =========================================================
+   LOGIN HEADER
+========================================================= */
+
+.employee-login-header {
+  margin-bottom: 30px;
+
+  text-align: center;
+}
+
+.employee-login-header p {
+  margin-bottom: 5px;
+
+  color: var(--primary-blue);
+
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.employee-login-header h1 {
+  margin-bottom: 8px;
+
+  color: var(--dark-blue);
+
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.employee-login-header span {
+  color: var(--text-gray);
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   LOGIN FORM
+========================================================= */
+
+.employee-login-form {
+  width: 100%;
+}
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.employee-form-group {
+  margin-bottom: 20px;
+}
+
+.employee-form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--text-dark);
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.employee-form-group input {
+  width: 100%;
+
+  padding: 13px 14px;
+
+  background: var(--white);
+  color: var(--text-dark);
+
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+
+  outline: none;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.employee-form-group input::placeholder {
+  color: var(--text-light);
+}
+
+.employee-form-group input:hover {
+  border-color: var(--light-blue);
+}
+
+.employee-form-group input:focus {
+  border-color: var(--primary-blue);
+
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* =========================================================
+   FORGOT PASSWORD
+========================================================= */
+
+.employee-forgot {
+  display: flex;
+  justify-content: flex-end;
+
+  margin-top: -5px;
+  margin-bottom: 22px;
+}
+
+.employee-forgot a {
+  color: var(--primary-blue);
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.employee-forgot a:hover {
+  color: var(--dark-blue);
+
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   SIGN IN BUTTON
+========================================================= */
+
+.employee-submit {
+  width: 100%;
+
+  padding: 13px 20px;
+
+  background: var(--dark-blue);
+  color: var(--white);
+
+  border: 2px solid var(--dark-blue);
+  border-radius: 10px;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.employee-submit:hover {
+  background: var(--main-yellow);
+  border-color: var(--main-yellow);
+
+  color: var(--dark-blue);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(var(--dark-blue-rgb), 0.15);
+}
+
+.employee-submit:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   BACK TO HOME
+========================================================= */
+
+.employee-back {
+  display: block;
+
+  margin-top: 22px;
+
+  color: var(--primary-blue);
+
+  text-align: center;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease;
+}
+
+.employee-back:hover {
+  color: var(--dark-blue);
+
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .employee-login-page {
+    padding: 30px 18px;
+  }
+
+  .employee-login-card {
+    padding: 30px 22px;
+
+    border-radius: 16px;
+  }
+
+  .employee-login-logo img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .employee-login-header {
+    margin-bottom: 25px;
+  }
+
+  .employee-login-header h1 {
+    font-size: 26px;
+  }
+
+  .employee-login-header span {
+    font-size: 13px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .employee-login-page {
+    padding: 20px 14px;
+  }
+
+  .employee-login-card {
+    padding: 28px 18px;
+  }
+
+  .employee-login-header h1 {
+    font-size: 24px;
+  }
+
+  .employee-form-group input {
+    padding: 12px;
+  }
+
+  .employee-submit {
+    padding: 12px 18px;
+  }
+
+}

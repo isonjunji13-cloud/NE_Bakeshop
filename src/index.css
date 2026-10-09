@@ -1,0 +1,337 @@
+
+/* =========================================
+   NE BAKESHOP
+   Global Styles
+   Minimalist 2026
+   Blue + Yellow Theme
+========================================= */
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HTML
+========================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+  min-width: 320px;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  background: #ffffff;
+  color: #123b70;
+
+  line-height: 1.6;
+
+  overflow-x: hidden;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/* =========================================
+   ROOT
+========================================= */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+:root {
+  /* Blue */
+  --primary-blue: #2563eb;
+  --dark-blue: #123b70;
+  --light-blue: #9fc3f3;
+
+  /* Blue RGB */
+  --dark-blue-rgb: 18, 59, 112;
+  
+  /* Yellow */
+  --main-yellow: #f6c945;
+  --light-yellow: #fef3c7;
+
+  /* Neutral */
+  --white: #ffffff;
+  --black: #111827;
+
+  /* Text */
+  --text-dark: #172554;
+  --text-gray: #64748b;
+  --text-light: #cbd8e8;
+
+  /* Background */
+  --page-background: #adcffb;
+
+  /* Border */
+  --border-color: #dbeafe;
+}
+
+
+/* =========================================
+   GLOBAL IMAGES
+========================================= */
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* =========================================
+   GLOBAL LINKS
+========================================= */
+
+a {
+  color: inherit;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+button {
+  font: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* =========================================
+   BRAND COLORS
+
+   Primary Blue:
+   #123b70
+
+   Yellow:
+   #f6c945
+
+   Light Blue:
+   #f4f8ff
+
+   Dark Text:
+   #24344d
+========================================= */
+
+
+/* =========================================
+   TEXT SELECTION
+========================================= */
+
+::selection {
+  color: #123b70;
+  background: #f6c945;
+}
+
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f4f8ff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #123b70;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f6c945;
+}
+
+
+/* =========================================
+   GLOBAL CONTAINER
+========================================= */
+
+.container {
+  width: 100%;
+  max-width: 1300px;
+
+  margin: 0 auto;
+  padding: 0 6%;
+}
+
+
+/* =========================================
+   SECTION
+========================================= */
+
+.section {
+  width: 100%;
+  padding: 80px 0;
+}
+
+
+/* =========================================
+   SECTION TITLE
+========================================= */
+
+.section-title {
+  margin-bottom: 12px;
+
+  color: #123b70;
+
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+
+/* =========================================
+   SECTION DESCRIPTION
+========================================= */
+
+.section-description {
+  max-width: 600px;
+
+  margin-bottom: 35px;
+
+  color: #607089;
+
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   PRIMARY BUTTON
+========================================= */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 22px;
+
+  color: #123b70;
+  background: #f6c945;
+
+  border-radius: 999px;
+
+  text-decoration: none;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.btn-primary:hover {
+  background: #123b70;
+  color: #ffffff;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(18, 59, 112, 0.18);
+}
+
+
+/* =========================================
+   SECONDARY BUTTON
+========================================= */
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 11px 21px;
+
+  color: #123b70;
+  background: #ffffff;
+
+  border: 1.5px solid #123b70;
+  border-radius: 999px;
+
+  text-decoration: none;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.btn-secondary:hover {
+  color: #ffffff;
+  background: #123b70;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .container {
+    padding: 0 5%;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .section {
+    padding: 50px 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-description {
+    font-size: 0.9rem;
+  }
+
+}

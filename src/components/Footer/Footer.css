@@ -1,0 +1,371 @@
+
+/* =========================================
+   NE BAKESHOP FOOTER
+   Minimalist 2026
+   Blue + Yellow Theme
+========================================= */
+
+.footer {
+  width: 100%;
+  background: #123b70;
+  color: #ffffff;
+}
+
+
+/* =========================================
+   UPPER FOOTER
+========================================= */
+
+.upper-footer {
+  max-width: 1300px;
+  margin: auto;
+
+  padding: 65px 6% 55px;
+
+  display: grid;
+  grid-template-columns:
+    1.5fr
+    1fr
+    1fr
+    1.2fr;
+
+  gap: 50px;
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.footer-brand {
+  max-width: 280px;
+}
+
+.footer-brand .Logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-brand .Logo img {
+  width: 55px;
+  height: 55px;
+
+  object-fit: contain;
+
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+.footer-brand .Logo p {
+  margin: 0;
+
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.footer-tagline {
+  margin: 20px 0 8px;
+
+  color: #f6c945;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.footer-description {
+  margin: 0;
+
+  color: #cbd8e8;
+
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   FOOTER COLUMNS
+========================================= */
+
+.footer-column h3,
+.social-links h3 {
+  margin: 0 0 20px;
+
+  color: #ffffff;
+
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.footer-links a {
+  width: fit-content;
+
+  color: #cbd8e8;
+
+  text-decoration: none;
+
+  font-size: 0.85rem;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.footer-links a:hover {
+  color: #f6c945;
+  transform: translateX(3px);
+}
+
+
+/* =========================================
+   SOCIAL
+========================================= */
+
+.social-text {
+  max-width: 200px;
+
+  margin: 0 0 18px;
+
+  color: #cbd8e8;
+
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 9px;
+}
+
+.social-buttons a {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #123b70;
+  background: #ffffff;
+
+  border-radius: 50%;
+
+  text-decoration: none;
+
+  font-weight: 700;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.social-buttons a:hover {
+  color: #123b70;
+  background: #f6c945;
+
+  transform: translateY(-3px);
+}
+
+
+/* =========================================
+   CONTACT STRIP
+========================================= */
+
+.contact-strip {
+  max-width: 1300px;
+  margin: auto;
+
+  padding: 25px 6%;
+
+  display: grid;
+  grid-template-columns:
+    1fr
+    1fr
+    1fr
+    auto;
+
+  align-items: center;
+
+  gap: 30px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.contact-strip > div:not(.footer-order) {
+  border-left: 2px solid #f6c945;
+  padding-left: 12px;
+}
+
+.contact-label {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #f6c945;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact-strip p {
+  margin: 0;
+
+  color: #dce6f2;
+
+  font-size: 0.8rem;
+}
+
+
+/* =========================================
+   ORDER BUTTON
+========================================= */
+
+.footer-order a {
+  display: inline-block;
+
+  padding: 11px 18px;
+
+  color: #123b70;
+  background: #f6c945;
+
+  border-radius: 999px;
+
+  text-decoration: none;
+
+  font-size: 0.82rem;
+  font-weight: 700;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.footer-order a:hover {
+  background: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   LOWER FOOTER
+========================================= */
+
+.lower-footer {
+  max-width: 1300px;
+  margin: auto;
+
+  padding: 22px 6%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.lower-footer p {
+  margin: 0;
+
+  color: #aebfd3;
+
+  font-size: 0.75rem;
+}
+
+.termAndConditions {
+  display: flex;
+  gap: 20px;
+}
+
+.termAndConditions a {
+  color: #aebfd3;
+
+  text-decoration: none;
+
+  font-size: 0.75rem;
+
+  transition: color 0.25s ease;
+}
+
+.termAndConditions a:hover {
+  color: #f6c945;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .upper-footer {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px;
+  }
+
+  .contact-strip {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .upper-footer {
+    grid-template-columns: 1fr;
+
+    padding: 45px 7%;
+
+    gap: 35px;
+  }
+
+  .footer-brand {
+    max-width: 100%;
+  }
+
+  .footer-column,
+  .social-links {
+    text-align: left;
+  }
+
+  .contact-strip {
+    grid-template-columns: 1fr;
+
+    padding: 30px 7%;
+  }
+
+  .footer-order {
+    margin-top: 5px;
+  }
+
+  .lower-footer {
+    flex-direction: column;
+
+    padding: 20px 7%;
+
+    text-align: center;
+  }
+
+  .termAndConditions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+}
