@@ -1,132 +1,128 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
-/* =========================
-   NAVBAR
-========================= */
+/* ========================================
+   NE BAKESHOP NAVBAR
+   Minimalist 2026
+   Blue + Yellow Theme
+======================================== */
 
 .navbar {
   width: 100%;
-  min-height: 75px;
-  padding: 0 7%;
+  min-height: 80px;
+  padding: 12px 6%;
+  box-sizing: border-box;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 28px;
 
-  background-color: #ffffff;
+  background: var(--white, #ffffff);
+  color: var(--dark-blue, #123b70);
 
-  border-bottom: 1px solid #e5e7eb;
-
-  box-sizing: border-box;
-
-  font-family: "Poppins", sans-serif;
-
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 1000;
+
+  border-bottom: 1px solid var(--border-color, #dbeafe);
+  box-shadow: 0 4px 18px rgba(var(--dark-blue-rgb, 18, 59, 112), 0.06);
 }
 
-
-/* =========================
+/* ========================================
    LOGO
-========================= */
+======================================== */
 
 .Logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 
+  flex-shrink: 0;
+
+  color: var(--dark-blue, #123b70);
   text-decoration: none;
-
-  color: #123b70;
-
-  font-size: 20px;
-  font-weight: 700;
-
-  white-space: nowrap;
 }
 
 .Logo img {
-  width: 45px;
-  height: 45px;
+  width: 48px;
+  height: 48px;
 
   object-fit: cover;
-
   border-radius: 50%;
 }
 
 .Logo p {
   margin: 0;
+
+  color: var(--dark-blue, #123b70);
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  white-space: nowrap;
 }
 
-
-/* =========================
+/* ========================================
    NAVIGATION LINKS
-========================= */
+======================================== */
 
 .nav-links {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 28px;
 }
 
-.nav-links a {
+.nav-links > a {
   position: relative;
 
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
+  gap: 8px;
 
+  padding: 10px 0;
+
+  color: var(--dark-blue, #123b70);
   text-decoration: none;
 
-  color: #123b70;
+  font-size: 0.94rem;
+  font-weight: 600;
 
-  font-size: 15px;
-  font-weight: 500;
-
-  transition:
-    color 0.2s ease,
-    transform 0.2s ease;
+  transition: color 0.25s ease;
 }
 
-.nav-links a:hover {
-  color: #eab308;
+/* Link hover */
+
+.nav-links > a:not(.employee-login):hover {
+  color: var(--primary-blue, #2563eb);
 }
 
+/* Yellow underline animation */
 
-/* =========================
-   LINK UNDERLINE
-========================= */
-
-.nav-links a:not(.cart-link):not(.employee-login)::after {
+.nav-links > a:not(.cart-link):not(.employee-login)::after {
   content: "";
 
   position: absolute;
   left: 0;
-  bottom: -7px;
+  bottom: 2px;
 
   width: 0;
-  height: 2px;
+  height: 3px;
 
-  background-color: #facc15;
+  background: var(--main-yellow, #f6c945);
+  border-radius: 10px;
 
   transition: width 0.25s ease;
 }
 
-.nav-links a:not(.cart-link):not(.employee-login):hover::after {
+.nav-links > a:not(.cart-link):not(.employee-login):hover::after {
   width: 100%;
 }
 
-
-/* =========================
-   CART
-========================= */
+/* ========================================
+   SHOPPING CART
+======================================== */
 
 .cart-link {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-
-  position: relative;
+  white-space: nowrap;
 }
 
 .cart-icon {
@@ -135,201 +131,264 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
+  font-size: 1.15rem;
 }
-
-.cart-icon i {
-  font-size: 18px;
-
-  transition: transform 0.2s ease;
-}
-
-.cart-link:hover .cart-icon i {
-  transform: scale(1.1);
-}
-
-
-/* =========================
-   CART QUANTITY BADGE
-========================= */
 
 .cart-badge {
   position: absolute;
-
-  top: -11px;
-  right: -13px;
+  top: -9px;
+  right: -12px;
 
   min-width: 19px;
   height: 19px;
-
   padding: 0 5px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background-color: #facc15;
-  color: #123b70;
-
-  border: 2px solid #ffffff;
-
-  border-radius: 50px;
-
-  font-size: 10px;
-  font-weight: 700;
-
-  line-height: 1;
-
   box-sizing: border-box;
 
-  animation: cartBadgePop 0.2s ease;
+  background: var(--main-yellow, #f6c945);
+  color: var(--dark-blue, #123b70);
+
+  border: 1px solid var(--white, #ffffff);
+  border-radius: 50px;
+
+  font-size: 0.7rem;
+  font-weight: 800;
+  line-height: 1;
 }
 
-.cart-link:hover .cart-badge {
-  transform: scale(1.1);
-}
-
-
-/* =========================
-   CART BADGE ANIMATION
-========================= */
-
-@keyframes cartBadgePop {
-  0% {
-    transform: scale(0.5);
-  }
-
-  70% {
-    transform: scale(1.15);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-
-/* =========================
-   EMPLOYEE LOGIN
-========================= */
+/* ========================================
+   EMPLOYEE SIGN IN
+======================================== */
 
 .employee-login {
-  width: 38px;
-  height: 38px;
+  width: 42px;
+  height: 42px;
+  padding: 0 !important;
 
-  display: flex !important;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
 
+  background: var(--dark-blue, #123b70);
+  color: var(--white, #ffffff) !important;
+
+  border: 2px solid transparent;
   border-radius: 50%;
 
-  background-color: #123b70;
-
-  color: #ffffff !important;
+  font-size: 1.05rem;
 
   transition:
-    background-color 0.2s ease,
-    transform 0.2s ease;
-}
-
-.employee-login i {
-  font-size: 16px;
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
 }
 
 .employee-login:hover {
-  background-color: #facc15;
-
-  color: #123b70 !important;
-
+  background: var(--main-yellow, #f6c945);
+  color: var(--dark-blue, #123b70) !important;
+  border-color: var(--main-yellow, #f6c945);
   transform: translateY(-2px);
 }
 
+.mobile-login-text {
+  display: none;
+}
 
-/* =========================
-   TABLET
-========================= */
+/* ========================================
+   MOBILE MENU BUTTON
+======================================== */
 
-@media (max-width: 900px) {
+.menu-toggle {
+  display: none;
 
+  width: 44px;
+  height: 44px;
+  padding: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+  color: var(--dark-blue, #123b70);
+
+  border: 1px solid transparent;
+  border-radius: 10px;
+
+  font-size: 1.45rem;
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.menu-toggle:hover {
+  background: var(--light-yellow, #fef3c7);
+  color: var(--primary-blue, #2563eb);
+  border-color: var(--main-yellow, #f6c945);
+}
+
+.menu-toggle:focus-visible,
+.nav-links a:focus-visible {
+  outline: 3px solid var(--main-yellow, #f6c945);
+  outline-offset: 4px;
+}
+
+/* ========================================
+   TABLET AND MOBILE
+======================================== */
+
+@media (max-width: 768px) {
   .navbar {
-    padding: 0 4%;
+    min-height: 72px;
+    padding: 10px 5%;
+
+    flex-wrap: wrap;
+    gap: 0;
   }
 
-  .nav-links {
-    gap: 18px;
-  }
-
-  .nav-links a {
-    font-size: 14px;
-  }
+  /* Logo */
 
   .Logo {
-    font-size: 18px;
+    gap: 10px;
+    max-width: calc(100% - 58px);
   }
 
   .Logo img {
-    width: 40px;
-    height: 40px;
-  }
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 700px) {
-
-  .navbar {
-    min-height: auto;
-
-    padding: 15px 5%;
-
-    flex-direction: column;
-
-    gap: 15px;
+    width: 42px;
+    height: 42px;
   }
 
-  .Logo {
-    justify-content: center;
+  .Logo p {
+    font-size: 1.2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
+
+  /* Hamburger */
+
+  .menu-toggle {
+    display: inline-flex;
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+
+  /* Collapsed navigation */
 
   .nav-links {
+    display: none;
+
     width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 4px;
 
-    justify-content: center;
+    margin-top: 12px;
+    padding: 12px;
 
-    gap: 18px;
+    background: var(--white, #ffffff);
 
-    flex-wrap: wrap;
+    border: 1px solid var(--border-color, #dbeafe);
+    border-radius: 14px;
+
+    box-shadow: 0 10px 25px rgba(var(--dark-blue-rgb, 18, 59, 112), 0.08);
   }
 
-  .nav-links a {
-    font-size: 13px;
+  /* Expanded navigation */
+
+  .nav-links.active {
+    display: flex;
+    animation: navbarSlideDown 0.22s ease-out;
   }
 
-  .employee-login {
-    width: 34px;
-    height: 34px;
+  /* Mobile links */
+
+  .nav-links > a {
+    width: 100%;
+    min-height: 46px;
+    padding: 12px 14px;
+
+    box-sizing: border-box;
+
+    justify-content: flex-start;
+    gap: 12px;
+
+    border-radius: 9px;
   }
 
-  .employee-login i {
-    font-size: 14px;
+  .nav-links > a:not(.employee-login)::after {
+    display: none;
+  }
+
+  .nav-links > a:not(.employee-login):hover {
+    color: var(--dark-blue, #123b70);
+    background: var(--light-yellow, #fef3c7);
+  }
+
+  /* Cart */
+
+  .cart-link {
+    justify-content: flex-start;
+  }
+
+  .cart-icon {
+    width: 22px;
+  }
+
+  /* Employee link in mobile menu */
+
+  .nav-links > .employee-login {
+    width: 100%;
+    height: auto;
+    min-height: 46px;
+
+    padding: 12px 14px !important;
+
+    display: flex;
+    justify-content: flex-start;
+    gap: 12px;
+
+    background: transparent;
+    color: var(--dark-blue, #123b70) !important;
+
+    border: 1px solid transparent;
+    border-radius: 9px;
+
+    font-size: 0.94rem;
+  }
+
+  .nav-links > .employee-login:hover {
+    background: var(--light-yellow, #fef3c7);
+    color: var(--dark-blue, #123b70) !important;
+    border-color: var(--main-yellow, #f6c945);
+    transform: none;
+  }
+
+  .mobile-login-text {
+    display: inline;
   }
 }
 
+/* ========================================
+   SMALL MOBILE SCREENS
+======================================== */
 
-/* =========================
-   SMALL MOBILE
-========================= */
-
-@media (max-width: 450px) {
-
+@media (max-width: 380px) {
   .navbar {
-    padding: 12px 4%;
+    padding-right: 4%;
+    padding-left: 4%;
   }
 
   .Logo {
-    font-size: 17px;
+    gap: 8px;
   }
 
   .Logo img {
@@ -337,25 +396,50 @@
     height: 36px;
   }
 
+  .Logo p {
+    font-size: 1.05rem;
+  }
+
+  .menu-toggle {
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+  }
+
   .nav-links {
-    gap: 12px;
+    padding: 8px;
+  }
+}
+
+/* ========================================
+   MENU ANIMATION
+======================================== */
+
+@keyframes navbarSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
   }
 
-  .nav-links a {
-    font-size: 12px;
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-links.active {
+    animation: none;
   }
 
-  .cart-icon i {
-    font-size: 16px;
-  }
-
-  .cart-badge {
-    min-width: 17px;
-    height: 17px;
-
-    top: -9px;
-    right: -11px;
-
-    font-size: 9px;
+  .nav-links > a,
+  .menu-toggle,
+  .employee-login,
+  .nav-links > a::after {
+    transition: none;
   }
 }
