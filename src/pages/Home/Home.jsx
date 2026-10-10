@@ -29,7 +29,7 @@ export function Home() {
 
         <div className="hero-image">
           <img
-            src="public/Logo/Hero_img.jpg"
+            src="/Logo/Hero_img.jpg"
             alt="Freshly baked bakery products"
           />
         </div>
@@ -132,7 +132,7 @@ export function Home() {
 
         <div className="about-image">
           <img
-            src="public/Logo/teacher.jpg"
+            src="/Logo/teacher.jpg"
             alt="Sweet Crumbs Bakery"
           />
         </div>
