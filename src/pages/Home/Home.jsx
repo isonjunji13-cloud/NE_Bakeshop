@@ -29,7 +29,7 @@ export function Home() {
 
         <div className="hero-image">
           <img
-            src="src/assets/Image/Hero_img.jpg"
+            src="public/Image/Hero_img.jpg"
             alt="Freshly baked bakery products"
           />
         </div>
@@ -132,7 +132,7 @@ export function Home() {
 
         <div className="about-image">
           <img
-            src="src/assets/Image/teacher.jpg"
+            src="public/Image/teacher.jpg"
             alt="Sweet Crumbs Bakery"
           />
         </div>
